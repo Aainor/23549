@@ -687,4 +687,8 @@ footer li a{
     body{
         padding-bottom: 55em;
     }
+    .site-container {
+        margin-inline: 20vw;
+        margin-bottom: 2vw;
+    }
 }
