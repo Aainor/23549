@@ -672,8 +672,18 @@ footer li a{
         }
     }    
 
+    @media screen and (min-width:1300px){
+        body{
+            padding-bottom: 60em;
+        }
+        .site-container {
+            margin-inline: 10vw;
+            margin-bottom: 2vw;
+        }
+
+    }
     
-@media screen and (min-width:1300px){
+@media screen and (min-width:1400px){
     body{
         padding-bottom: 55em;
     }
