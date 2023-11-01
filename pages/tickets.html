@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto FE</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="logo">
+        <img src="../assets/img/codoacodo.png" alt="Logo de Codo a Codo">
+        <h3 class="titulo">Conf Bs As</h3>
+        </div>
+
+        <nav>
+        <a href="../index.html">La conferencia</a>
+        <a href="../index.html">Los oradores</a>
+        <a href="../index.html">El lugar y la fecha</a>
+        <a class="active" href="../index.html">Conviértete en orador</a>
+        <a href="./tickets.html" id="ticket">Comprar tickets</a>
+        </nav>
+        
+    </header>
+
+    <main>
+        <section id="tarjetas">
+            <div class="t-estudiante">
+                <article id="t-texto">
+                    <h4>Estudiante</h4>
+                    <p>Tienen un descuento</p>
+                    <h5>80%</h5>
+                    <h6>*presentar documentación</h6>
+                </article>
+            </div>
+
+            <div class="t-trainee">
+                <article id="t-texto">
+                    <h4>Trainee</h4>
+                    <p>Tienen un descuento</p>
+                    <h5>50%</h5>
+                    <h6>*presentar documentación</h6>
+                </article>
+            </div>
+
+            <div class="t-junior">
+                <article id="t-texto">
+                    <h4>Junior</h4>
+                    <p>Tienen un descuento</p>
+                    <h5>15%</h5>
+                    <h6>*presentar documentación</h6>
+                </article>
+            </div>
+        </section>
+
+        <section class="t-main">
+        <div class="titulo-t">
+        <h5>VENTA</h5>
+        <h2>VALOR DE TICKET $200</h2>
+        </div>
+
+        <div class="t-form">
+            <form>
+                <div class="t-form__group">
+                <input type="text" name="name" class="t-nombre" id="t-form__input" placeholder="Nombre" required>
+                </div>  
+
+                <div class="t-form__group">
+                <input type="text" name="surname" class="t-apellido" id="t-form__input" placeholder="Apellido" required>
+                </div>
+
+                <div class="t-form__group">
+                    <input type="email" name="mail" class="t-correo" id="t-form__input" placeholder="Correo" required>
+                </div>
+
+                <div class="t-form__group">
+                    <h5 id="c">Cantidad</h5>
+                    <input type="text" name="quantity" inputmode="numeric" pattern="[0-9]" class="t-cantidad" id="t-form__input" placeholder="Cantidad" required>
+                </div>
+
+                <div class="t-form__group">
+                    <h5 id="c2">Categoría</h5>
+                    <select name="categoria" id="categorias">
+                        <option value="1">Estudiante</option>
+                        <option value="2">Trainee</option>
+                        <option value="3">Junior</option>
+                        <option value="4">Sin Categoría</option>
+                    </select>
+                </div>
+
+                <input class="boton" type="reset" value="Borrar">
+                <input class="boton" type="submit" value="Resumen">
+                
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footerNav">
+        <ul>
+     <li><a href="#">Preguntas<br>frecuentes</a></li>
+     <li><a href="#">Contáctanos</a></li>
+     <li><a href="#">Prensa</a></li>
+     <li><a href="#">Conferencias</a></li>
+     <li><a href="#">Términos y<br>condiciones</a></li>
+     <li><a href="#">Privacidad</a></li>
+     <li class="excepcion"><a href="#">Estudiantes</a></li>
+        </ul>
+        </div>
+    </footer>
+</body>
+<script src="../js/main.js"></script>
+</html>

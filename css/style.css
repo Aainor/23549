@@ -382,6 +382,109 @@ textarea::-webkit-scrollbar{
     text-align: center;
   }
 
+  #tarjetas {
+    display: flex;
+    justify-content: center;
+    padding: 1.5em;
+    border: none;
+  }
+
+  .t-estudiante {
+    border-color: #007BFF;
+    border-width: 1.5px;
+    border-style: solid;
+    padding: 1em;
+    margin: 0.2em;
+  }
+
+  .t-trainee {
+    border-color: #17A2B8;
+    border-width: 1.5px;
+    border-style: solid;
+    padding: 1em;
+    margin: 0.2em;
+  }
+
+  .t-junior {
+    border-color: #FFC107;
+    border-width: 1.5px;
+    border-style: solid;
+    padding: 1em;
+    margin: 0.2em;
+  }
+
+  #t-texto{
+    text-align: center;
+    padding: 1em;
+
+    & h4{
+        padding-bottom: 0.5em;
+    }
+
+    & p {
+        margin: 0.2em;
+    }
+
+    & h5{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    & h6{
+        opacity: 50%;
+        font-weight: lighter;
+    }
+  }
+
+  .t-main {
+
+    .titulo-t{
+        text-align: center;
+        margin-bottom: 1em;
+
+        & h5{
+        font-weight: lighter;
+    }
+    }
+    
+    .t-form__group{
+        margin: auto;
+        width: 90%;
+        max-width: 700px;
+        padding: .5em 3em;
+        text-align: center;
+        display: grid;
+        gap: 1em;
+        position: relative;
+        padding: 0.5em 0;
+
+        #c{
+            display: flex;
+        }
+
+        .t-cantidad{
+            text-decoration: none;
+        }
+
+        #c2{
+
+        }
+    }
+
+    .boton {
+        background-color: #96C93E;
+        border: none;
+        outline: none;
+        display: inline-block;
+        color: white;
+        border-radius: 4px;
+        text-decoration: none;
+        padding: 10px 90px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+  }
+
 footer {
     position: absolute;
     bottom: 0;
