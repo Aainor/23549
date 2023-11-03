@@ -29,8 +29,9 @@
     </header>
 
     <main>
+        <div class="row">
         <section id="tarjetas">
-            <div class="t-estudiante">
+            <div class="t-estudiante col-sm-10 col-md-6 col-lg-4 col-xl-4">
                 <article id="t-texto">
                     <h4>Estudiante</h4>
                     <p>Tienen un descuento</p>
@@ -39,7 +40,7 @@
                 </article>
             </div>
 
-            <div class="t-trainee">
+            <div class="t-trainee col-sm-10 col-md-6 col-lg-4 col-xl-4">
                 <article id="t-texto">
                     <h4>Trainee</h4>
                     <p>Tienen un descuento</p>
@@ -48,7 +49,7 @@
                 </article>
             </div>
 
-            <div class="t-junior">
+            <div class="t-junior col-sm-10 col-md-6 col-lg-4 col-xl-4">
                 <article id="t-texto">
                     <h4>Junior</h4>
                     <p>Tienen un descuento</p>
@@ -57,6 +58,7 @@
                 </article>
             </div>
         </section>
+    </div>
 
         <section class="t-main">
         <div class="titulo-t">
@@ -68,31 +70,31 @@
             <form id="ticketForm">
                 <div class="columnas-1">
                 <div class="t-form__group">
-                <input type="text" name="name" class="t-nombre t-form__input" placeholder="Nombre" required>
+                <input type="text" name="name" class="t-nombre t-form__input required" id="name" placeholder="Nombre" required pattern="^[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+$">
                 </div>  
 
                 <div class="t-form__group">
-                <input type="text" name="surname" class="t-apellido t-form__input" placeholder="Apellido" required>
+                <input type="text" name="surname" class="t-apellido t-form__input required" id="surname" placeholder="Apellido" required pattern="^[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+$">
                 </div>
             </div>
 
-                <div class="t-form__group">
-                    <input type="email" name="mail" class="t-correo t-form__input" placeholder="Correo" required>
-                </div>
+                
+                    <input type="email" name="mail" class="t-correo t-form__input required" id="mail" placeholder="Correo" required>
+              
 
                 <div class="columnas-2">
                 <div class="t-form__group">
-                    <h5 id="c">Cantidad</h5>
-                    <input type="number" name="quantity" inputmode="numeric" min="1" max="100" class="t-cantidad t-form__input" id="miInput" placeholder="Cantidad" required>
+                    <h5 class="c">Cantidad</h5>
+                    <input type="number" name="quantity" inputmode="numeric" min="1" max="100" class="t-cantidad t-form__input required" id="miInput" placeholder="Cantidad" required>
                 </div>
 
                 <div class="t-form__group">
-                    <h5 id="c2">Categoría</h5>
-                    <select name="categoria" class="t-categoria t-form__input" id="descuento">
-                        <option value="1">Estudiante</option>
-                        <option value="2">Trainee</option>
-                        <option value="3">Junior</option>
-                        <option value="4">Sin Categoría</option>
+                    <h5 class="c">Categoría</h5>
+                    <select name="categoria" class="t-categoria t-form__input required" id="descuento">
+                        <option value="1">Sin categoría</option>
+                        <option value="2">Estudiante</option>
+                        <option value="3">Trainee</option>
+                        <option value="4">Junior</option>
                     </select>
                 </div>
             </div>
