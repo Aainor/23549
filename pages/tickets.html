@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyecto FE</title>
     <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/t-style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
     </style>
@@ -65,37 +65,65 @@
         </div>
 
         <div class="t-form">
-            <form>
+            <form id="ticketForm">
+                <div class="columnas-1">
                 <div class="t-form__group">
-                <input type="text" name="name" class="t-nombre" id="t-form__input" placeholder="Nombre" required>
+                <input type="text" name="name" class="t-nombre t-form__input" placeholder="Nombre" required>
                 </div>  
 
                 <div class="t-form__group">
-                <input type="text" name="surname" class="t-apellido" id="t-form__input" placeholder="Apellido" required>
+                <input type="text" name="surname" class="t-apellido t-form__input" placeholder="Apellido" required>
                 </div>
+            </div>
 
                 <div class="t-form__group">
-                    <input type="email" name="mail" class="t-correo" id="t-form__input" placeholder="Correo" required>
+                    <input type="email" name="mail" class="t-correo t-form__input" placeholder="Correo" required>
                 </div>
 
+                <div class="columnas-2">
                 <div class="t-form__group">
                     <h5 id="c">Cantidad</h5>
-                    <input type="text" name="quantity" inputmode="numeric" pattern="[0-9]" class="t-cantidad" id="t-form__input" placeholder="Cantidad" required>
+                    <input type="number" name="quantity" inputmode="numeric" min="1" max="100" class="t-cantidad t-form__input" id="miInput" placeholder="Cantidad" required>
                 </div>
 
                 <div class="t-form__group">
                     <h5 id="c2">Categoría</h5>
-                    <select name="categoria" id="categorias">
+                    <select name="categoria" class="t-categoria t-form__input" id="descuento">
                         <option value="1">Estudiante</option>
                         <option value="2">Trainee</option>
                         <option value="3">Junior</option>
                         <option value="4">Sin Categoría</option>
                     </select>
                 </div>
+            </div>
 
-                <input class="boton" type="reset" value="Borrar">
-                <input class="boton" type="submit" value="Resumen">
-                
+            <p id="Total">Total a Pagar: $<span id="precioTotal">0.00</span></p>
+
+            <button type="button" class="button" id="calcularPrecioTotal">Calcular Precio Total</button>
+
+                <div class="columnas-3">
+                <input class="b-borrar button" type="reset" value="Borrar">
+                <button type="button" class="b-resumen button">Resumen</button>
+                </div> 
+            
+    <div id="modal" class="modal">
+        <div class="modal-content">
+        <img src="../assets/img/404-tick.png" alt="Imágen de Tick Verde"> 
+        <h2>¡Estás a un paso de tener tus tickets!</h2>
+        <p>Por favor confirme que la información ingresada es correcta antes de completar su compra.</p>
+          <h3>Resumen de la Compra</h3>
+          <p>Nombre: <span id="resumenNombre"></span></p>
+          <p>Apellido: <span id="resumenApellido"></span></p>
+          <p>Correo: <span id="resumenCorreo"></span></p>
+          <p>Cantidad de Tickets: <span id="resumenCantidad"></span></p>
+          <p>Categoría de Descuento: <span id="resumenCategoria"></span></p>
+          <p id="Total">Total a Pagar: $<span id="precioTotalModal">0.00</span></p>
+          <button id="confirmar">Confirmar</button>
+          <button id="close">Cancelar</button>
+        </div>
+      </div>
+    </div> 
+
             </form>
         </section>
 

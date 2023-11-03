@@ -1,0 +1,351 @@
+:root {
+    --bgcolor: #353A40;
+    --textcolor: #989BA5;
+    --greencolor: #2AA643;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 10em;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    height: 7em;
+    background-color: var(--bgcolor);
+    align-items: center;
+    padding: 0.2em;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 4em;
+}
+
+.titulo {
+    color: white;
+    font-weight: lighter;
+}
+
+header nav a{
+    text-decoration: none;
+    margin: 1em;
+    color: var(--textcolor);
+}
+
+header nav a.active{
+    color: white;
+}
+
+header nav #ticket{
+    color: #9dc572;
+}
+
+#tarjetas {
+    display: flex;
+    justify-content: center;
+    padding: 1.5em;
+    border: none;
+  }
+
+  .t-estudiante {
+    border-color: #007BFF;
+    border-width: 1.5px;
+    border-style: solid;
+    padding: 1em;
+    margin: 0.2em;
+  }
+
+  .t-trainee {
+    border-color: #17A2B8;
+    border-width: 1.5px;
+    border-style: solid;
+    padding: 1em;
+    margin: 0.2em;
+  }
+
+  .t-junior {
+    border-color: #FFC107;
+    border-width: 1.5px;
+    border-style: solid;
+    padding: 1em;
+    margin: 0.2em;
+  }
+
+  #t-texto{
+    text-align: center;
+    padding: 1em;
+
+    & h4{
+        padding-bottom: 0.5em;
+    }
+
+    & p {
+        margin: 0.2em;
+    }
+
+    & h5{
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    & h6{
+        opacity: 50%;
+        font-weight: lighter;
+    }
+  }
+
+  .t-main {
+    display: flex;
+    position: relative;
+    justify-content: center;
+
+    .titulo-t {
+        text-align: center;
+        margin-bottom: 1em;
+        justify-content: center;
+        position: absolute;
+
+        & h5{
+        font-weight: lighter;
+    }
+    
+    }
+    
+    .t-form__group{
+        width: 90%;
+        max-width: 700px;
+        padding: .5em 3em;
+        display: grid;
+        gap: 1em;
+        padding: 0.5em 0;
+        position: relative;
+    }
+
+    .t-form__input {
+        display: flex;
+        width: 100%;
+        color: var(--textcolor);
+        text-decoration: none;
+        font-size: 0.7rem;
+        padding: .6em .3em;
+        border-radius: 6px;
+        border-color: #bfbfbf;
+    }
+
+    #Total {
+        background-color: #CBE5FE;
+        border: 1px solid #C4D9EE;
+        color: #223C5F;
+        border-radius: 4px;
+        padding: 10px 90px;
+    }
+
+    .button {
+        background-color: #96C93E;
+        border: none;
+        outline: none;
+        display: inline-block;
+        color: white;
+        border-radius: 4px;
+        text-decoration: none;
+        padding: 10px 90px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+  }
+
+  .columnas-1, .columnas-2, .columnas-3 {
+    display: flex;
+    column-gap: 0.5em;
+  }
+
+  .modal {
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+  }
+
+  .modal button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal p {
+    margin: 1em;
+  }
+
+  #modal {
+    display: none;
+  }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0px 5px;
+    background-image: linear-gradient(to right, #192f3b, #1b3a4b, #1d465c, #1f516e, #225d80);
+    font-size: 1em;
+}
+
+.footerNav{
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.footerNav ul{
+    justify-content: center;
+    list-style-type: none;
+}
+
+.footerNav li{
+    margin: 20px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+footer li a{
+    text-decoration: none;
+    color: var(--textcolor);
+}
+
+.t-form {
+    transform: translateY(4em);
+}
+
+@media screen and (min-width:501px){
+    body{
+        padding-bottom: 45em;
+    }
+}
+
+@media screen and (min-width:635px){
+    body{
+        padding-bottom: 45em;
+    }
+}
+
+
+@media screen and (min-width:925px){
+    body{
+        padding-bottom: 45em;
+    }
+}
+
+@media screen and (min-width:1060px){
+
+    body{
+        padding-bottom: 25em;
+    }
+
+    header {
+        height: 4em;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin: 0 5em;
+    }
+
+    header nav{
+        margin-right: 5em;
+    }
+
+    header nav a:hover{
+        color: white;
+    }
+
+    
+    footer {
+        font-size: 0.8em;
+    }
+
+    .footerNav ul{
+        padding: 0.5em;
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+    }
+    
+    .footerNav li{
+        margin: 20px;
+        text-decoration: none;
+        font-size: 1.3em;
+        padding-right: 2em;
+
+        .excepcion {
+            padding-right: 0;
+        }
+    }
+
+    .footerNav li a:hover{
+        color: white;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+
+    body {
+        padding-bottom: 65em;
+    }
+}    
+
+@media screen and (min-width:1300px){
+    body{
+        padding-bottom: 25em;
+    }
+}
+    
+@media screen and (min-width:1400px){
+    body{
+        padding-bottom: 25em;
+    }
+}
