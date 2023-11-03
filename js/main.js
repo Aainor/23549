@@ -21,6 +21,7 @@ inputElement.addEventListener('input', function() {
     inputElement.value = numericValue;
 });
 
+
 function verificarFormulario() {
   const nombreInput = document.querySelector(".t-nombre");
   const apellidoInput = document.querySelector(".t-apellido");
@@ -37,6 +38,7 @@ function verificarFormulario() {
 
   return formularioCompleto;
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
   const miInputInput = document.getElementById("miInput");
@@ -57,11 +59,11 @@ document.addEventListener("DOMContentLoaded", function() {
       let precioUnitario = 200;
 
       // Aplicar descuento según la categoría
-      if (descuento === "1") {
+      if (descuento === "2") {
         precioUnitario *= 0.2; // 80% de descuento
-      } else if (descuento === "2") {
-        precioUnitario *= 0.5; // 50% de descuento
       } else if (descuento === "3") {
+        precioUnitario *= 0.5; // 50% de descuento
+      } else if (descuento === "4") {
         precioUnitario *= 0.85; // 15% de descuento
       }
 
@@ -80,5 +82,6 @@ document.addEventListener("DOMContentLoaded", function() {
     calcularPrecioTotalButton.disabled = true; // Deshabilitar el botón
   });
 });
+
 
 
